@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D76A5A224CB7C3A00BF32FD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5A124CB7C3A00BF32FD /* main.c */; };
 		5D76A5AA24CB822500BF32FD /* prompt.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5A924CB822500BF32FD /* prompt.c */; };
+		5D76A5AD24CB82EA00BF32FD /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5AC24CB82EA00BF32FD /* parser.c */; };
+		5D76A5B024CB833900BF32FD /* compute.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5AF24CB833900BF32FD /* compute.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		5D76A5A124CB7C3A00BF32FD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		5D76A5A824CB822500BF32FD /* prompt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prompt.h; sourceTree = "<group>"; };
 		5D76A5A924CB822500BF32FD /* prompt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = prompt.c; sourceTree = "<group>"; };
+		5D76A5AB24CB82EA00BF32FD /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		5D76A5AC24CB82EA00BF32FD /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		5D76A5AE24CB833900BF32FD /* compute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compute.h; sourceTree = "<group>"; };
+		5D76A5AF24CB833900BF32FD /* compute.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compute.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				5D76A5A124CB7C3A00BF32FD /* main.c */,
 				5D76A5A824CB822500BF32FD /* prompt.h */,
 				5D76A5A924CB822500BF32FD /* prompt.c */,
+				5D76A5AB24CB82EA00BF32FD /* parser.h */,
+				5D76A5AC24CB82EA00BF32FD /* parser.c */,
+				5D76A5AE24CB833900BF32FD /* compute.h */,
+				5D76A5AF24CB833900BF32FD /* compute.c */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -125,7 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D76A5A224CB7C3A00BF32FD /* main.c in Sources */,
+				5D76A5AD24CB82EA00BF32FD /* parser.c in Sources */,
 				5D76A5AA24CB822500BF32FD /* prompt.c in Sources */,
+				5D76A5B024CB833900BF32FD /* compute.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
