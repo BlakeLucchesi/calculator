@@ -7,8 +7,12 @@
 //
 
 #include "compute.h"
+#include "lexer.h"
 
 char *compute(char *input)
 {
-  return "hello";
+  if (validInput(input)) {
+    return "Valid!";
+  }
+  return "Invalid!";
 }
