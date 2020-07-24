@@ -7,9 +7,18 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, const char * argv[]) {
-  // insert code here...
-  printf("Hello, World!\n");
+  char buffer[255];
+  
+  while (buffer[0] != EOF) {
+    printf("calc > ");
+    if (fgets(buffer, 255, stdin) == NULL) {
+      printf("bye bye!\n");
+      return 0;
+    }
+    printf("calc > %s\n", buffer);
+  }
   return 0;
 }
