@@ -1,18 +1,17 @@
 //
-//  prompt.h
+//  lexer.h
 //  calculator
 //
 //  Created by blakelucchesi on 7/24/20.
 //  Copyright © 2020 nonya. All rights reserved.
 //
 
-#ifndef prompt_h
-#define prompt_h
+#ifndef lexer_h
+#define lexer_h
 
 #include <stdio.h>
+#include <stdbool.h>
 
-typedef char *(*computer)(char *);
+bool validInput(char *input);
 
-int prompt(computer compute);
-
-#endif /* prompt_h */
+#endif /* lexer_h */

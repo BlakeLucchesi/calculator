@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		5D76A5A224CB7C3A00BF32FD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5A124CB7C3A00BF32FD /* main.c */; };
 		5D76A5AA24CB822500BF32FD /* prompt.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5A924CB822500BF32FD /* prompt.c */; };
+		5D76A5AD24CB82EA00BF32FD /* parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5AC24CB82EA00BF32FD /* parser.c */; };
+		5D76A5B024CB833900BF32FD /* compute.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5AF24CB833900BF32FD /* compute.c */; };
+		5D76A5B324CB85A400BF32FD /* lexer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5B224CB85A400BF32FD /* lexer.c */; };
+		5D76A5BE24CB8AC400BF32FD /* calculator_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5BD24CB8AC400BF32FD /* calculator_tests.m */; };
+		5D76A5C424CB8B0400BF32FD /* lexer_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5C324CB8B0400BF32FD /* lexer_tests.m */; };
+		5D76A5C524CB8B3A00BF32FD /* lexer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5B224CB85A400BF32FD /* lexer.c */; };
+		5D76A5C724CB8D2C00BF32FD /* compute_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5C624CB8D2C00BF32FD /* compute_tests.m */; };
+		5D76A5C824CB8D3100BF32FD /* compute.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D76A5AF24CB833900BF32FD /* compute.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,10 +36,28 @@
 		5D76A5A124CB7C3A00BF32FD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		5D76A5A824CB822500BF32FD /* prompt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prompt.h; sourceTree = "<group>"; };
 		5D76A5A924CB822500BF32FD /* prompt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = prompt.c; sourceTree = "<group>"; };
+		5D76A5AB24CB82EA00BF32FD /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		5D76A5AC24CB82EA00BF32FD /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		5D76A5AE24CB833900BF32FD /* compute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compute.h; sourceTree = "<group>"; };
+		5D76A5AF24CB833900BF32FD /* compute.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compute.c; sourceTree = "<group>"; };
+		5D76A5B124CB85A400BF32FD /* lexer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
+		5D76A5B224CB85A400BF32FD /* lexer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lexer.c; sourceTree = "<group>"; };
+		5D76A5BB24CB8AC400BF32FD /* calculator-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calculator-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D76A5BD24CB8AC400BF32FD /* calculator_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculator_tests.m; sourceTree = "<group>"; };
+		5D76A5BF24CB8AC400BF32FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D76A5C324CB8B0400BF32FD /* lexer_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lexer_tests.m; sourceTree = "<group>"; };
+		5D76A5C624CB8D2C00BF32FD /* compute_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = compute_tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5D76A59B24CB7C3A00BF32FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D76A5B824CB8AC400BF32FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,7 +70,8 @@
 		5D76A59524CB7C3A00BF32FD = {
 			isa = PBXGroup;
 			children = (
-				5D76A5A024CB7C3A00BF32FD /* calculator */,
+				5D76A5B624CB8A8700BF32FD /* calculator */,
+				5D76A5BC24CB8AC400BF32FD /* calculator-tests */,
 				5D76A59F24CB7C3A00BF32FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +80,36 @@
 			isa = PBXGroup;
 			children = (
 				5D76A59E24CB7C3A00BF32FD /* calculator */,
+				5D76A5BB24CB8AC400BF32FD /* calculator-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D76A5A024CB7C3A00BF32FD /* calculator */ = {
+		5D76A5B624CB8A8700BF32FD /* calculator */ = {
 			isa = PBXGroup;
 			children = (
 				5D76A5A124CB7C3A00BF32FD /* main.c */,
 				5D76A5A824CB822500BF32FD /* prompt.h */,
 				5D76A5A924CB822500BF32FD /* prompt.c */,
+				5D76A5AB24CB82EA00BF32FD /* parser.h */,
+				5D76A5AC24CB82EA00BF32FD /* parser.c */,
+				5D76A5AE24CB833900BF32FD /* compute.h */,
+				5D76A5AF24CB833900BF32FD /* compute.c */,
+				5D76A5B124CB85A400BF32FD /* lexer.h */,
+				5D76A5B224CB85A400BF32FD /* lexer.c */,
 			);
 			path = calculator;
+			sourceTree = "<group>";
+		};
+		5D76A5BC24CB8AC400BF32FD /* calculator-tests */ = {
+			isa = PBXGroup;
+			children = (
+				5D76A5BD24CB8AC400BF32FD /* calculator_tests.m */,
+				5D76A5BF24CB8AC400BF32FD /* Info.plist */,
+				5D76A5C324CB8B0400BF32FD /* lexer_tests.m */,
+				5D76A5C624CB8D2C00BF32FD /* compute_tests.m */,
+			);
+			path = "calculator-tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +132,23 @@
 			productReference = 5D76A59E24CB7C3A00BF32FD /* calculator */;
 			productType = "com.apple.product-type.tool";
 		};
+		5D76A5BA24CB8AC400BF32FD /* calculator-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D76A5C024CB8AC400BF32FD /* Build configuration list for PBXNativeTarget "calculator-tests" */;
+			buildPhases = (
+				5D76A5B724CB8AC400BF32FD /* Sources */,
+				5D76A5B824CB8AC400BF32FD /* Frameworks */,
+				5D76A5B924CB8AC400BF32FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "calculator-tests";
+			productName = "calculator-tests";
+			productReference = 5D76A5BB24CB8AC400BF32FD /* calculator-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +159,9 @@
 				ORGANIZATIONNAME = nonya;
 				TargetAttributes = {
 					5D76A59D24CB7C3A00BF32FD = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					5D76A5BA24CB8AC400BF32FD = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -115,9 +180,20 @@
 			projectRoot = "";
 			targets = (
 				5D76A59D24CB7C3A00BF32FD /* calculator */,
+				5D76A5BA24CB8AC400BF32FD /* calculator-tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D76A5B924CB8AC400BF32FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D76A59A24CB7C3A00BF32FD /* Sources */ = {
@@ -125,7 +201,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D76A5A224CB7C3A00BF32FD /* main.c in Sources */,
+				5D76A5B324CB85A400BF32FD /* lexer.c in Sources */,
+				5D76A5AD24CB82EA00BF32FD /* parser.c in Sources */,
 				5D76A5AA24CB822500BF32FD /* prompt.c in Sources */,
+				5D76A5B024CB833900BF32FD /* compute.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D76A5B724CB8AC400BF32FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D76A5C524CB8B3A00BF32FD /* lexer.c in Sources */,
+				5D76A5C724CB8D2C00BF32FD /* compute_tests.m in Sources */,
+				5D76A5C424CB8B0400BF32FD /* lexer_tests.m in Sources */,
+				5D76A5C824CB8D3100BF32FD /* compute.c in Sources */,
+				5D76A5BE24CB8AC400BF32FD /* calculator_tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +348,38 @@
 			};
 			name = Release;
 		};
+		5D76A5C124CB8AC400BF32FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "calculator-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nonya.calculator-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5D76A5C224CB8AC400BF32FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "calculator-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nonya.calculator-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -274,6 +397,15 @@
 			buildConfigurations = (
 				5D76A5A624CB7C3A00BF32FD /* Debug */,
 				5D76A5A724CB7C3A00BF32FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D76A5C024CB8AC400BF32FD /* Build configuration list for PBXNativeTarget "calculator-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D76A5C124CB8AC400BF32FD /* Debug */,
+				5D76A5C224CB8AC400BF32FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

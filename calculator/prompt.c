@@ -8,7 +8,7 @@
 
 #include "prompt.h"
 
-int prompt() {
+int prompt(computer compute) {
   char buffer[255];
   
   while (buffer[0] != EOF) {
@@ -17,7 +17,7 @@ int prompt() {
       printf("bye bye!\n");
       return 0;
     }
-    printf("calc > %s\n", buffer);
+    printf("calc > %s\n", compute(buffer));
   }
   return 0;
 }

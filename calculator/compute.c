@@ -1,16 +1,18 @@
 //
-//  main.c
+//  compute.c
 //  calculator
 //
 //  Created by blakelucchesi on 7/24/20.
 //  Copyright © 2020 nonya. All rights reserved.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "prompt.h"
 #include "compute.h"
+#include "lexer.h"
 
-int main(int argc, const char * argv[]) {
-  return prompt(compute);
+char *compute(char *input)
+{
+  if (validInput(input)) {
+    return "Valid!";
+  }
+  return "Invalid!";
 }
